@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Warming | ພາວະໂລກຮ້ອນ</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+
+      <div class="logo">
+        <span class="logo-icon">🌍</span>
+        <div>
+          <span>GLOBAL WARMING</span>
+          <small>Student Website • BCT 2026</small>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#home">🏠 ໜ້າຫຼັກ</a>
+        <a href="#about">ກ່ຽວກັບ</a>
+        <a href="#causes">ສາເຫດ</a>
+        <a href="#effects">ຜົນກະທົບ</a>
+        <a href="#solutions">ວິທີແກ້ໄຂ</a>
+        <a href="#stats">ສະຖີຕີ</a>
+        <a href="#gallery">ຮູບພາບ</a>
+        <a href="#quiz">ບົດເຝີກຫັດ</a>
+        <a href="#reference">ແຫຼ່ງຂໍ້ມູນ</a>
+        <a href="#contact">ຕິດຕໍ່ 📞</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-theme" onclick="toggleTheme()" title="ສຫັບ dark/light mode">🌙</button>
+        <button class="btn-nav" onclick="scrollToSection('solutions')">🌱 ຮ່ວມຮັກສາໂລກ</button>
+      </div>
+
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMenu()">🏠 ໜ້າຫຼັກ</a>
+    <a href="#about" onclick="closeMenu()">ກ່ຽວກັບ</a>
+    <a href="#causes" onclick="closeMenu()">ສາເຫດ</a>
+    <a href="#effects" onclick="closeMenu()">ຜົນກະທົບ</a>
+    <a href="#solutions" onclick="closeMenu()">ວິທີແກ້ໄຂ</a>
+    <a href="#stats" onclick="closeMenu()">ສະຖີຕີ 📊</a>
+    <a href="#gallery" onclick="closeMenu()">ຮູບພາບ 🏞</a>
+    <a href="#quiz" onclick="closeMenu()">ບົດເຝີກຫັດ</a>
+    <a href="#reference" onclick="closeMenu()">ແຫຼ່ງຂໍ້ມູນ</a>
+    <a href="#contact" onclick="closeMenu()">ຕິດຕໍ່ 📞</a>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">🌿 ເວັບໄຊ້ການສຶກສາ • ປີ 2026</div>
+
+      <h1><b>ພາວະໂລກຮ້ອນ</b></h1>
+      <h2>GLOBAL WARMING &amp; CLIMATE CHANGE</h2>
+
+      <p>
+       <b>ໝາຍເຫດ:</b> ເວັບໄຊ້ນີ້ສ້າງຂຶ້ນເພື່ອໃຫ້ຄວາມຮູ້ກ່ຽວກັບພາວະໂລກຮ້ອນ ສາເຫດ, ຜົນກະທົບ
+        ແລະ ວິທີການຮ່ວມມືຮັກສາສິ່ງແວດລ້ອມ ເພື່ອຊ່ວຍຫຼຸດຜ່ອນປ່ອຍກາສຜິດສູ່ຊັ້ນບັນຍາກາດຂອງໂລກ.
+      </p>
+
+      <div class="hero-mini-stats">
+        <div class="mini-stat">
+          <strong>+1.1°C</strong>
+          <span>ອຸນຫະພູມໂລກເພີ່ມຂຶ້ນ</span>
+        </div>
+        <div class="mini-stat">
+          <strong>420 ppm</strong>
+          <span>CO₂ ໃນຊັ້ນບັນຍາກາດ</span>
+        </div>
+        <div class="mini-stat">
+          <strong>3.3 mm/ປີ</strong>
+          <span>ລະດັບນ້ຳທະເລສູງຂຶ້ນ</span>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="scrollToSection('about')">ເລີ່ມຮຽນຮູ້ →</button>
+        <button class="btn-outline" onclick="scrollToSection('quiz')">📝 ບົດເຝີກຫັດ</button>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>scroll ລົງ</span>
+      <span style="font-size:20px;">⬇</span>
+    </div>
+  </section>
+
+  <section class="quick-cards">
+    <div class="card" onclick="scrollToSection('causes')">
+      <div class="icon">🏭</div>
+      <h3>ສາເຫດ</h3>
+      <p>ໂຮງງານ, ລົດຍົນ, ຕັດໄມ້ປ່າ, ຈູດຂີ້ເຫຍື້ອ</p>
+    </div>
+    <div class="card" onclick="scrollToSection('effects')">
+      <div class="icon">🌪️</div>
+      <h3>ຜົນກະທົບ</h3>
+      <p>ພາຍຸ, ນ້ຳຖ້ວມ, ໄພ້ແຫ້ງ, ໄຟໄໝ້ປ່າ</p>
+    </div>
+    <div class="card" onclick="scrollToSection('solutions')">
+      <div class="icon">🌱</div>
+      <h3>ວິທີແກ້ໄຂ</h3>
+      <p>ໃຊ້ພະລັງງານທົດແທນ, ປູກຕົ້ນໄມ້, ຫຼຸດຂີ້ເຫຍື້ອ</p>
+    </div>
+    <div class="card" onclick="scrollToSection('stats')">
+      <div class="icon">📊</div>
+      <h3>ສະຖີຕີ</h3>
+      <p>ຕົວເລກສຳຄັນທີ່ສະແດງຄວາມຮ້ຳຍແຮງ</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-header">
+      <h2>🌡️ ກ່ຽວກັບພາວະໂລກຮ້ອນ</h2>
+      <p>ຄວາມໝາຍ ແລະ ຄວາມແຕກຕ່າງລະຫວ່າງ Global Warming ແລະ Climate Change</p>
+    </div>
+    <div class="about-box">
+      <p><b>(Global Warming):</b>ຄື ການເພີ່ມຂຶ້ນອຸນຫະພູມສະເລ່ຍຂອງໂລກ ເນື່ອງຈາກວ່າກາສຜິດທີ່ມະນຸດເຮົາປ່ອຍນັ້ນສະສົມໄວ້ໃນຊັ້ນບັນຍາກາດຫຼາຍຂຶ້ນ ເຊັ່ນ: CO₂, CH₄ ແລະ N₂O.</p>
+      <br>
+      <p><b>(Climate Change):</b>ຄື ການປ່ຽນແປງສະພາບອາກາດ ເເລະ ຜົນກະທົບທີ່ຕາມມາ ເຊັ່ນ: ອາກາດແປ່ປວນ, ຝົນຕົກຜິດລະດູ, ພາຍຸຮຸນແຮງ ແລະ ອຸນຫະພູມປ່ຽນແປງຜິດປົກກະຕິ.</p>
+    </div>
+  </section>
+
+   <section class="section" id="causes">
+    <div class="section-header">
+      <h2>ສາເຫດຫຼັກທີ່ເຮັດໃຫ້ເກີດພາວະໂລກຮ້ອນ</h2>
+      <p>ເກີດຈາກກາສຜິດທີ່ເພີ່ມຂື້ນຈາກການກະທຳຂອງມະນຸດເຊັ່ນ:</p>
+    </div>
+
+    <div class="grid">
+      <div class="info-box">
+        <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 03.43.08.jpeg" alt="">
+        <h3>1) ໂຮງງານອຸດສາຫະກຳ</h3>
+        <p>ການຜະລິດພະລັງງານ ແລະ ສ້າງສີນຄ້າ ປ່ອຍ CO₂ ເປັນຈຳນວນຫຼາຍ</p>
+        <button class="btn-more"onclick="toggleMore('cause1')">ອ່ານເພີ່ມເຕີມ...</button>
+        <div class="more-text" id="cause1">
+          <p>
+            ໂຮງງານໄຟຟ້ານຂະໜາດໃຫຍ່,ໂຮງງານໄຟຟ້າຖ່ານຫີນ ເປັນເເຫຼ່ງຂອງການປ່ອຍກາສຜິດເຊັ່ນ:CO₂
+            ເຮັດໃຫ້ເກີດພາວະເຮືອນເເກ້ວ ແລະ ເພີ່ມອຸນຫະພູມໂລກ.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 03.43.09.jpeg" alt="">
+        <h3>2) ການຄົມມະນາຄົມ</h3>
+        <p> ລົດຍົນ ແລະ ເຄື່ອງບິນໃຊ້ນ້ຳມັນເຮັດໃຫ້ເກີດມົນລະຜິດທາງອາກາດ ເເລະ ປ່ອຍ CO₂</p>
+        <button class="btn-more" onclick="toggleMore('cause2')">ອ່ານເພີ່ມເຕີມ...</button>
+        <div class="more-text" id="cause2">
+          <p>
+            ການເດີນທາງດ້ວຍລົດຍົນສ່ວນຕົວເປັນຈຳນວນຫຼາຍ ເຮັດໃຫ້ເກີດຄວັນຜິດໃນເມື່ອງ
+            ເເລະ ເຮັດໃຫ້ປະລີມານ ຄາຣ໌ບອນໄດໃນອາກາດເພິ່ມຂື້ນຢ່າງຕໍ່ເນື່ອງ.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 03.43.10.jpeg" alt="">
+        <h3>3) ການຕັດໄມ້ທຳລາຍປ່າ</h3>
+        <p>ຕົ້ນໄມ້ຄືເຄື່ອງດູດຊັບ CO₂ ເເຕ່ເມື່ອບໍ່ມີຕົ້ນໄມ້ເເລ້ວໂລກຈະດູດຊັບໄດ້ນ້ອຍລົງ.</p>
+        <button class="btn-more" onclick="toggleMore('cause3')">ອ່ານເພີ່ມເຕີມ...</button>
+        <div class="more-text" id="cause3">
+          <p>
+            ການຕັດໄມ່ທຳລາຍປ່າ ເເລະ ຈູດໄຟປ່າບໍ່ພຽງເເຕ່ເຮັດໃຫ້ CO₂ ເພີ່ມຂື້ນເເຕ່ຍັງເຮັດໃກ້ສູນເສຍທີ່ຢູ່ອາໄສຂອງສັດ
+            ສົງຜົນກະທົບຕໍ່ລະບົບນີເວດໂດຍກົງ.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 04.12.51 (2).jpeg"alt="">
+        <h3>4) ຂີ້ເຫຍື້ອ ເເລະ ການຈູດຂີ້ເຫຍື້ອ</h3>
+        <p>ຂິ້ເຫຍື້ອອີນທີລຽມປ່ອຍ(CH₄) ແລະ ການຈູດຂີ້ເຫຍື້ອປ່ອຍຄວັນຜິດ</p>
+        <button class="btn-more" onclick="toggleMore('cause4')">ອ່ານເພີ່ມເຕີມ...</button>
+        <div class="more-text" id="cause4">
+          <p>
+            ຂີ້ເຫຍື້ອອາຫານເມື່ອຍ່ອຍສະລາຍເເລ້ວປ່ອຍ (CH₄) ເຊີ່ງມີຜົນຕໍ່ພາວະໂລກຮ້ອນສູງຫຼາຍ
+            ເເລະ ການຈູດຂີ້ເຫຍື້ອເຮັດໃຫ້ເກີດຝຸ່ນ PM 2.5 ເພີ່ມຂື້ນ.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="effects">
+    <div class="section-header">
+      <h2>🌊 ຜົນກະທົບຂອງພາວະໂລກຮ້ອນ</h2>
+      <p>ສົ່ງຜົນຕໍ່ທຳມະຊາດ,ລະບົບນີເວດທາງທະເລ,ສຸຂະພາບມະນຸດ ແລະ ເສດຖະກິດທົ່ວໂລກ.</p>
+    </div>
+
+    <div class="grid">
+      <div class="info-box">
+          <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 04.12.49 (1).jpeg" alt="">
+        <div class="img-placeholder">🧊</div>
+        <h3>ນ້ຳແຂງຂົ້ວໂລກລະລາຍ</h3>
+        <p>ລະດັບນ້ຳທະເລສູງຂຶ້ນເຮັດໃຫ້ສັດບາງຊະນິດສູນເສຍຖີ່ນອາໄສເຊັ່ນ:ໝີຂົ້ວໂລກ ແລະ ນົກເພກວິນ.</p>
+      </div>
+
+      <div class="info-box">
+        <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 04.12.49.jpeg" alt="">
+        <div class="img-placeholder">🌪️</div>
+        <h3>ໄພ້ພິບັດຮຸນແຮງຂຶ້ນ</h3>
+        <p>ພາຍຸ, ນ້ຳຖ້ວມ, ໄພ້ແຫ້ງເເລ້ງ.</p>
+      </div>
+
+      <div class="info-box">
+        <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 05.39.37.jpeg" alt="">
+        <div class="img-placeholder">🪸</div>
+        <h3>ປະກາລັງຟອກຂາວ</h3>
+        <p>ອຸນຫະພູມນ້ຳທະເລສູງ.</p>
+      </div>
+
+      <div class="info-box">
+        <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 04.12.48 (1).jpeg" alt="">
+        <div class="img-placeholder">😷</div>
+        <h3>ຝຸ່ນ PM 2.5 ເພີ່ມຂຶ້ນ</h3>
+        <p>ສົ່ງຜົນກະທົບຕໍ່ສຸຂະພາບມະນູດ ເເລະ ເສດຖະກິດ.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="solutions">
+    <div class="section-header">
+      <h2>🌿 ວິທີຊ່ວຍຫຼຸດຜ່ອນພາວະໂລກຮ້ອນ</h2>
+      <p>ທຸກຄົນເລີ່ມຈາກສິ່ງນ້ອຍໆ ໃນຊີວິດປະຈຳວັນ.</p>
+    </div>
+
+    <div class="solution-grid">
+      <div class="solution-card"><h3>💡 ປະຢັດພະລັງງານ</h3><p>ປິດໄຟ, ຫຼຸດໃຊ້ແອ, ໃຊ້ LED</p></div>
+      <div class="solution-card"><h3>🚲 ຫຼຸດຜ່ອນການໃຊ້ລົດຍົນ</h3><p>ຍ່າງ, ຂີ່ລົດຖີບ, ໃຊ້ລົດສາທາລະນະ</p></div>
+      <div class="solution-card"><h3>♻️ ໃຊ້ 3R</h3><p>Reduce, Reuse, Recycle</p></div>
+      <div class="solution-card"><h3>🌳 ປູກຕົ້ນໄມ້ເພື່ອທົດເເທນ</h3><p>ຕົ້ນໄມ້ດູດ CO₂ ເເລະຍັງປ່ອຍ O2 ທີເປັນຜົນດີຕໍ່ສີ່ງທີມີຊີວິດທູກຊະນິດ.</p></div>
+      <div class="solution-card"><h3>🥗 ຫຼຸດຜ່ອນການຖີ້ມຂີ້ເຫຍື້ອຊະຊາຍ</h3><p>ຂີ້ເຫຍື້ອອາຫານປ່ອຍ CH₄.</p></div>
+      <div class="solution-card"><h3>🌞 ໃຊ້ພະລັງງານສະອາດ</h3><p>ໃຊ້ພະລັງງານທົດແທນເຊັ່ນ: ໃສ່ເເຜ່ນໂຊລະເຊວ, ພະງານລົມ</p></div>
+    </div>
+  </section>
+
+  <section class="section dark" id="stats">
+    <div class="section-header">
+      <h2>📊 ສະຖີຕິສຳຄັນ</h2>
+      <p>ຕົວເລກທີ່ຊ່ວຍໃຫ້ເຫັນຄວາມຮ້ຳຍແຮງ</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-box"><h3 class="counter" data-target="1.1">0</h3><p>ອຸນຫະພູມໂລກເພີ່ມ (°C)</p></div>
+      <div class="stat-box"><h3 class="counter" data-target="420">0</h3><p>CO₂ ໃນຊັ້ນບັນຍາກາດ (ppm)</p></div>
+      <div class="stat-box"><h3 class="counter" data-target="3.3">0</h3><p>ລະດັບນ້ຳທະເລ ເພີ່ມ/ປີ (mm)</p></div>
+      <div class="stat-box"><h3 class="counter" data-target="100">0</h3><p>% ທີ່ເຮົາຊ່ວຍໄດ້</p></div>
+    </div>
+  </section>
+
+   <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="section-header">
+      <h2> ຊ່ວຍກັນຮັກສາສີ່ງເເວດລ້ອມ ແລະ ເພີ່ມພື້ນທີ່ສີຂຽວໃຫ້ໂລກ</h2>
+      <p>ໂດຍການປູກຕົ້ນໄມ້ ເເລະ ຫັນມາໃຊ້ພະລັງງານທົດເເທນຫຼີກລ້ຽງພະລັງງານຟອສຊີວ</p>
+    </div>
+
+    <div class="gallery-grid">
+      <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 05.08.19.jpeg" alt="">
+      <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 04.12.51 (1).jpeg" alt="">
+      <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 04.12.51.jpeg" alt="">
+      <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 05.39.37.jpeg" alt="">
+      <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 05.08.56.jpeg" alt="">
+      <img class="zoomable" src="imag/WhatsApp Image 2026-04-29 at 04.12.50 (3).jpeg" alt="">
+    </div>
+  </section>
+  <section class="section dark" id="quiz">
+    <div class="section-header">
+      <h2>📝 ບົດເຝີກຫັດ</h2>
+      <p>ຕອບ 3 ຄຳຖາມ</p>
+    </div>
+
+    <div class="quiz-box">
+      <div class="quiz-question">
+        <h3>1) ຂໍ້ໃດຕໍ່ໄປນີ້ແມ່ນກາສຫຼັກທີ່ເຮັດໃຫ້ເກີດພາວະໂລກຮ້ອນ?</h3>
+        <label><input type="radio" name="q1" value="0"> O₂</label>
+        <label><input type="radio" name="q1" value="1"> CO₂</label>
+        <label><input type="radio" name="q1" value="0"> N₂</label>
+        <label><input type="radio" name="q1" value="0"> H₂</label>
+      </div>
+
+      <div class="quiz-question">
+        <h3>2) ຂໍ້ໃດຕໍ່ໄປນິ້ແມ່ນສາເຫດຫຼັກຂອງພາວະໂລກຮ້ອນ?</h3>
+        <label><input type="radio" name="q2" value="1"> ເຜົາໄໝ້ເຊື້ອເພີ່ງຟອສຊີລ</label>
+        <label><input type="radio" name="q2" value="0"> ດື່ມນ້ຳເຢັນ</label>
+        <label><input type="radio" name="q2" value="0"> ຫຼີ້ນໂທລະສັບ</label>
+        <label><input type="radio" name="q2" value="0"> ອ່ານໜັງສື</label>
+      </div>
+
+      <div class="quiz-question">
+        <h3>3) ຂໍ້ໃດຕໍ່ໄປນີ້ແມ່ນວິທີຊ່ວຍຫຼຸດຜ່ອນພາວະໂລກຮ້ອນ?</h3>
+        <label><input type="radio" name="q3" value="0"> ຕັດໄມ້ປ່າ</label>
+        <label><input type="radio" name="q3" value="1"> ແຍກຂີ້ເຫຍື້ອ ແລະ ລີໄຊເຄີລ</label>
+        <label><input type="radio" name="q3" value="0"> ຈຸດຂີ້ເຫຍື້ອ</label>
+        <label><input type="radio" name="q3" value="0"> ໃຊ້ຖົງຢາງຫຼາຍໆ</label>
+      </div>
+
+      <button class="btn-primary" onclick="checkQuiz()">ສົ່ງຄຳຕອບ ✓</button>
+      <button class="btn-outline" onclick="resetQuiz()" style="margin-left:10px;">🔄 ເລີ່ມໃໝ່</button>
+
+      <p class="quiz-result" id="quizResult"></p>
+    </div>
+  </section>
+
+  
+  <section class="section" id="reference">
+
+    <div class="section-header">
+      <h2>📚 ແຫຼ່ງຂໍ້ມູນອ້າງອີ່ງຈາກ</h2>
+    </div>
+
+    <div class="reference-box">
+      <h2 class="ref-title">🔗 ຄລິກລີ້ງເພື່ອສືກສາເພີ່ມເຕີ່ມ...</h2>
+      <div class="ref-grid">
+        <a href="https://climate.nasa.gov/" target="_blank" class="ref-card"><span class="ref-icon">🚀</span><div><strong>NASA Climate Change</strong><p>ຂໍ້ມູນວິທະຍາສາດຈາກ NASA</p></div></a>
+        <a href="https://www.ipcc.ch/" target="_blank" class="ref-card"><span class="ref-icon">📋</span><div><strong>IPCC</strong><p>ຄະນະກຳມະການລະຫວ່າງລັດຖະບານ</p></div></a>
+        <a href="https://www.un.org/en/climatechange" target="_blank" class="ref-card"><span class="ref-icon">🌐</span><div><strong>United Nations Climate</strong><p>ອົງການສະຫະປະຊາຊາດ</p></div></a>
+        <a href="https://www.noaa.gov/climate" target="_blank" class="ref-card"><span class="ref-icon">🌊</span><div><strong>NOAA Climate</strong><p>ຂໍ້ມູນຄຸ້ມຄອງບັນຍາກາດ</p></div></a>
+        <a href="https://www.nationalgeographic.com/environment/topic/climate-change" target="_blank" class="ref-card"><span class="ref-icon">🗺️</span><div><strong>National Geographic</strong><p>ສິ່ງແວດລ້ອມ ແລະ ສະພາບອາກາດ</p></div></a>
+        <a href="https://www.greenpeace.org/" target="_blank" class="ref-card"><span class="ref-icon">☮️</span><div><strong>Greenpeace</strong><p>ອົງການຮັກສາສິ່ງແວດລ້ອມ</p></div></a>
+        <a href="https://en.wikipedia.org/wiki/Global_warming" target="_blank" class="ref-card"><span class="ref-icon">📖</span><div><strong>Wikipedia: Global Warming</strong><p>ພາບລວມ ແລະ ການອ້າງອີ່ງ</p></div></a>
+      </div>
+<section class="section" id="contact">
+   <section class="section" id="contact">
+  <div class="section-header">
+    <h2>📞 ຕິດຕໍ່</h2>
+    <p>ສາມາດຕິດຕໍ່ຜູ້ສ້າງໄດ້ທຸກເວລາ ເພື່ອສອບຖາມ ຫຼື ແນະນຳຂໍ້ມູນເພີ່ມເຕີມ</p>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <div class="contact-left">
+      <h2>👤 ຂໍ້ມູນຜູ້ສ້າງ</h2>
+
+      <div class="creator-grid">
+        <div class="creator-item">
+          <span class="creator-label">ຊື່ ແລະ ນາມສະກຸນ:</span>
+          <span>ທ້າວ.ທອງແກ້ວ ລາວເຊີ.</span>
+        </div>
+
+        <div class="creator-item">
+          <span class="creator-label">ຫ້ອງ:</span>
+          <span>B1/2 E.</span>
+        </div>
+
+        <div class="creator-item">
+          <span class="creator-label">ນັກສຶກສາປີ:</span>
+          <span>01.</span>
+        </div>
+
+        <div class="creator-item">
+          <span class="creator-label">ສາຂາ:</span>
+          <span>ວິທະຍາສາດຄອມພີວເຕີ ແລະ ວີສາວະກຳຊອບເເວ່ (Computer Science & Software Engineering)</span>
+        </div>
+
+        <div class="creator-item" style="grid-column: 1/-1;">
+          <span class="creator-label">ວິທະຍາໄລ:</span>
+          <span>ວີທະຍາໄລ ບີຊີທີ ເພື່ອການສືກສາດ້ານໄອທີ(BCT College for IT Education).</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <h2>📩 ຊ່ອງທາງຕິດຕໍ່.</h2>
+      <p class="contact-desc">ກົດເລືອກຊ່ອງທາງທີ່ສະດວກ ເພື່ອຕິດຕໍ່.</p>
+
+      <div class="contact-grid">
+        <a href="https://wa.me/qr/MIKWKJJHKBWZG1" target="_blank" class="contact-card whatsapp-card">
+          <i class="fa-brands fa-whatsapp contact-icon"></i>
+          <div>
+            <strong>WhatsApp</strong>
+            <p>ຄລິກເພື່ອສົ່ງຂໍ້ຄວາມຫາຂ້ອຍ.</p>
+          </div>
+        </a>
+
+        <a href="https://www.facebook.com/share/18F3bkZEq1/" target="_blank" class="contact-card facebook-card">
+          <i class="fa-brands fa-facebook contact-icon"></i>
+          <div>
+            <strong>Facebook</strong>
+            <p>ກົດເພື່ອເຂົ້າໄປຫາ Facebook</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-note">
+        <h4>💡 ໝາຍເຫດ:</h4>
+        <p>🙏ຂໍອະໄພກັບທຸກທ່ານຖ້າມີຂໍ້ມູນປະການໃດຜິດພາດ ເເລະ ບໍ່ຄົບຖ້ວນ
+          ຖ້າມີຂໍ້ແນະນຳ ຫຼື ຂໍ້ມູນທີ່ຕ້ອງແກ້ໄຂ ສາມາດເເຈ້ງຕິດຕໍ່ເພີ່ມເຕີມໄດ້ ຂໍຂອບໃຈ🧡.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Global Warming | Student Website — BCT College for IT Education</p>
+    <p>ສ້າງຂຶ້ນເພື່ອການສຶກສາ 🌍</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="scrollToSection('home')" title="ກັບຂຶ້ນດ້ານເທິງ">⬆</button>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="lightbox image">
+  </div>
+
+  <!-- Link JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
